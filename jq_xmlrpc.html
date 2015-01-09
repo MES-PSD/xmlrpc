@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script src="jquery/jquery-2.1.1.js"></script>
+		<script src="jquery/jquery.xmlrpc.min.js"></script>
+		<script>
+			$.xmlrpc({
+    				url: 'http://localhost/sir1415/xmlrpc/server.php',
+    				// usa um proxy server cors
+    				//url: 'http://127.0.0.1:5001/127.0.0.1:5000',
+    				methodName: 'add',
+    				params: [1,2],
+    				success: function(response, status, jqXHR) {
+    					alert(response);
+   				},
+    				error: function(jqXHR, status, error) { 
+   				}
+			});
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
